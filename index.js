@@ -57,7 +57,7 @@ function makeAudioObject(a) {
 }
 
 function tellTime() {
-    var myDate = calcTime(1);
+    var myDate = new Date();
     var myHour = myDate.getHours();
     var myMinute = myDate.getMinutes();
     var minuteDivBy5 = myMinute / 5;
@@ -119,26 +119,4 @@ function tellTime() {
             // console.log("1h");
         }
     }
-
-}
-
-// function to calculate local time
-// in a different city
-// given the city's UTC offset
-function calcTime(offset) {
-
-    // create Date object for current location
-    d = new Date();
-    
-    // convert to msec
-    // add local time zone offset 
-    // get UTC time in msec
-    utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-    
-    // create new Date object for different city
-    // using supplied offset
-    nd = new Date(utc + (3600000*offset));
-    
-    // return time as a string
-    return nd;
 }

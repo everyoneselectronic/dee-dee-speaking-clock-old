@@ -1,6 +1,7 @@
 // node app.js
 // ngrok http 5500
 // http://localhost:4040/
+var port = process.env.PORT || 8080;
     
 var baseUrl = "#href[http://test.everyoneselectronic.co.uk/limmy/";
 
@@ -39,7 +40,7 @@ var server = http.createServer(function (request, response) {
     });
 
 });
-server.listen(5500);
+server.listen(port);
 
 function makeAudioObject(a) {
     var str = baseUrl + a + ".wav]";

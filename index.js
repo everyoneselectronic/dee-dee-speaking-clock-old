@@ -8,7 +8,7 @@ var baseUrl = "#href[http://test.everyoneselectronic.co.uk/limmy/";
 var responsedata = {
     "Instructions": [],
     "Action": {
-        "name" : "Hangup"
+        // "name" : "Hangup"
     }
 };
 tellTime();

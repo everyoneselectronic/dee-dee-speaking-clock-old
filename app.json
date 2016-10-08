@@ -1,6 +1,6 @@
 {
-  "name": "Start on Heroku: Node.js",
-  "description": "A barebones Node.js app using Express 4",
+  "name": "dee-dee-speaking-clock",
+  "description": "speaking clock",
   "repository": "https://github.com/everyoneselectronic/dee-dee-speaking-clock",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": ["node", "static"],

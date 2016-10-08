@@ -1,17 +1,15 @@
 // node app.js
 // ngrok http 5500
 // http://localhost:4040/
+
 var port = process.env.PORT || 8080;
     
 var baseUrl = "#href[http://test.everyoneselectronic.co.uk/limmy/";
 
 var responsedata = {
     "Instructions": [],
-    "Action": {
-        // "name" : "Hangup"
-    }
+    "Action": {}
 };
-tellTime();
 
 var http = require('http')
 
@@ -35,6 +33,7 @@ var server = http.createServer(function (request, response) {
         {
             requestModel = JSON.parse(data);
             response.writeHead(200, { 'Content-Type': 'application/json' });
+            tellTime();
             response.end(JSON.stringify(responsedata));
         }
     });
@@ -57,6 +56,11 @@ function makeAudioObject(a) {
 }
 
 function tellTime() {
+    responsedata = {
+        "Instructions": [],
+        "Action": {}
+    };
+    
     var myDate = new Date();
     var myHour = myDate.getHours();
     var myMinute = myDate.getMinutes();
